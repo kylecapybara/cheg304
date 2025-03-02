@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{forest}
+
+\begin{document}
+
+\begin{forest}
+for tree={
+    grow=east,
+    edge={-latex},
+    parent anchor=east,
+    child anchor=west,
+    l sep=20mm,
+    s sep=10mm,
+    anchor=west,
+    calign=first,
+    calign child=2,
+    edge path={
+        \noexpand\path [draw, \forestoption{edge}] (!u.parent anchor) -- +(5pt,0) |- (.child anchor)\forestoption{edge label};
+    }
+}
+[Event
+    [Outcome 1
+        [Sub-outcome 1.1]
+        [Sub-outcome 1.2]
+    ]
+    [Outcome 2
+        [Sub-outcome 2.1]
+        [Sub-outcome 2.2]
+    ]
+]
+\end{forest}
+
+\end{document}

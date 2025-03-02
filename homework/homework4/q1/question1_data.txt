@@ -1,0 +1,6 @@
+Number of Employees,Number of Accidents
+447,0
+132,1
+42,2
+21,3
+5,4 
