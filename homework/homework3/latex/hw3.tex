@@ -1,0 +1,186 @@
+\documentclass{article}
+
+\input{preamble}
+\usepackage{tikz-3dplot}
+\usepackage{booktabs}
+\usepackage{titling}
+\usepackage{fancyhdr}
+\usetikzlibrary{patterns}
+
+\usepackage{tcolorbox}
+\usepackage[export]{adjustbox}
+
+\tcbset{colback=blue!7!white}
+\tcbsetforeverylayer{colframe=blue!75!black}
+
+
+\pretitle{\vspace{-4em}\begin{flushleft}\LARGE} % Adjust the size and alignment
+    \posttitle{\end{flushleft}}
+    \preauthor{\begin{flushleft}\large} % Adjust the size and alignment
+    \postauthor{\hspace{2em} \large \thedate\end{flushleft}} % Place author and date on the same line
+    \predate{} % Remove the default date formatting
+    \postdate{} % Remove the default date formatting
+
+\pagestyle{fancy}
+\fancyhf{} % Clear all header and footer fields
+\fancyfoot[R]{\thepage} % Right-align the page number in the footer
+\renewcommand{\headrulewidth}{0pt} % Remove the header rule
+\renewcommand{\footrulewidth}{0pt} % Remove the footer rule
+\setlength{\fboxrule}{1pt}
+
+\geometry{
+    top=2cm,    % Top margin
+    bottom=3cm, % Bottom margin
+    left=2.5cm, % Left margin
+    right=2.5cm % Right margin
+}
+\title{\bfseries CHEG304 Homework 3}
+\author{author udid: 702687390}
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{}
+
+Looking at the equation for the poisson distribution again
+\[ \frac{\lambda^x \exp(-\lambda)}{x!} \tag{poisson distribution}\]
+Now, to find the expected value of this distribution we need to do an infinite sum of the poisson evaluated at each discrete $x$ multiplied by x
+\[ E[x] = \sum_{i=1}^{\infty} x_i \frac{\lambda^{x_i} \exp(-\lambda)}{x_i!} \]
+and using the properties of the factorial this becomes 
+\[ E[x] = \exp(-\lambda) \sum_{i=1}^{\infty}  \frac{\lambda^{x_i} }{(x_i-1)!} = \exp(-\lambda) \lambda \sum_{i=1}^{\infty}  \frac{\lambda^{x_i - 1} }{(x_i-1)!} \]
+it's not painfully obvious, but the sum is the taylor series of $\exp(\lambda)$,
+\[ \exp(\lambda) = \sum_{i=1}^{\infty} \frac{\lambda^i}{i!} \tag{taylor series of $e^\lambda$}\]
+which makes our sum
+\[ E[x] = \lambda \exp(-\lambda) \exp(\lambda) = \lambda \]
+\hfill
+$ \blacksquare $
+
+\vspace{2em}
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\vspace{2em}
+
+\section{}
+\subsection*{a}
+the valid variable space is all $t>0$, so
+\begin{align*}
+    \int_{0}^{y} \eta \exp(-\eta t) \ dt &= \left[ -\exp(-\eta t) \right]_{0}^{y} \\
+    &= \exp(0) - \exp(-\eta y)
+\end{align*}
+now we want to know our integral to infinity, so we take the limit as y approaches infinity
+\[ \lim_{y \rightarrow \infty} 1 - \exp(-\eta y) = 1 - 0 = 1 \]
+
+\subsection*{b}
+i'll start by converting $\eta$ into units of days
+\[ \eta = 1 \frac{\text{failure}}{3 \text{ years}} \times \frac{1 \text{ year}}{365 \text{ days}} = \frac{1}{1095} \frac{\text{failure}}{\text{day}} \]
+now we (probably) want to take the integral from day 0 to day 90 of our pdf
+\begin{align*}
+    \int_{0}^{90} \eta \exp(-\eta t) \ dt &= \left[ -\exp(-\eta t) \right]_{t=0}^{t=90}\\
+    &= \exp(0) - \exp(-90\eta) \\
+    &= \boxed{0.0789}
+\end{align*}
+so about 8\%
+
+
+\vspace{2em}
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\vspace{2em}
+
+\section{}
+the joint pdf can be constructed by realizing if each day for $X_1$ is equally likely, the day for $X_2$ is just another perfectly random choice from the remaning days. We just need to keep the constraint in mind when putting together the table. 
+\begin{table}[ht]
+    \centering
+    \begin{tabular}{lccccc|c}
+    \toprule
+    & $X_2=1$ & $X_2=2$ & $X_2=3$ & $X_2=4$ & $X_2=5$ & $f_1(X_1)$ \\
+    \midrule
+    $X_1 = 1$ & 1/25 & 1/25 & 1/25 & 1/25 & 1/25 & 1/5 \\
+    $X_1 = 2$ & 0 & 1/20 & 1/20 & 1/20 & 1/20 & 1/5 \\
+    $X_1 = 3$ & 0 & 0 & 1/15 & 1/15 & 1/15 & 1/5 \\
+    $X_1 = 4$ & 0 & 0 & 0 & 1/10 & 1/10 & 1/5 \\
+    $X_1 = 5$ & 0 & 0 & 0 & 0 & 1/5 & 1/5 \\
+    \midrule
+    $f_2(X_2)$ & 0.040 & 0.090 & 0.157 & 0.257 & 0.457 & \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+\noindent
+now to show they are not independent consider $f(X_1=1, X_2=1)$.
+\begin{align*}
+    f(X_1=1, X_2=1) &\stackrel{?}{=} f_1(X_1 = 1) \cdot f_1(X_2=1) \\
+    0.04 &\stackrel{?}{=} (0.20) \cdot (0.04) \\
+    0.04 &\neq 0.008
+\end{align*}
+therefore they are not independent. there is another interpretation I originally had where every possible combination of days had the same probability, $1/15$. here is that PDF: (hopefully I don't get docked points for sharing both even though the wording is inprecise.)
+\begin{table}[H]
+    \centering
+    \begin{tabular}{lccccc|c}
+    \toprule
+    & $X_2=1$ & $X_2=2$ & $X_2=3$ & $X_2=4$ & $X_2=5$ & $f_1(X_1)$ \\
+    \midrule
+    $X_1 = 1$ & 1/15 & 1/15 & 1/15 & 1/15 & 1/15 & 5/15 \\
+    $X_1 = 2$ & 0 & 1/15 & 1/15 & 1/15 & 1/15 & 4/15 \\
+    $X_1 = 3$ & 0 & 0 & 1/15 & 1/15 & 1/15 & 3/15 \\
+    $X_1 = 4$ & 0 & 0 & 0 & 1/15 & 1/15 & 2/15 \\
+    $X_1 = 5$ & 0 & 0 & 0 & 0 & 1/15 & 1/15 \\
+    \midrule
+    $f_2(X_2)$ & 1/15 & 2/15 & 3/15 & 4/15 & 5/15 & \\
+    \bottomrule
+    \end{tabular}
+\end{table}
+now to show they are not independent consider $f(X_1=1, X_2=1)$.
+\begin{align*}
+    f(X_1=1, X_2=1) &\stackrel{?}{=} f_1(X_1 = 1) \cdot f_2(X_2=1) \\
+    1/15 &\neq (5/15) \cdot (1/15) \\
+\end{align*}
+therefore they are not independent.
+
+$\hfill \blacksquare$
+\vspace{2em}
+\noindent\makebox[\linewidth]{\rule{\textwidth}{0.4pt}}
+\vspace{2em}
+
+\section{}
+looking at our pdf
+\[ f(t_1, t_2) = c \exp (-0.1t_1 - 0.1t_2) \]
+we know that for this to be valid the probabilities must sum to 1, which in math looks like
+\[ \int_{t_2 = 0}^{t_2 = \infty} \int_{t_1=0}^{t_1=\infty} f(t_1, t_2) \ dt_1 dt_2 = 1 \]
+now, after mentally preparing for MATH243 war flashbacks, and using $k$ and $l$ to represent our upper bounds of integration (limit incoming later)
+\begin{align*}
+    c \int_{t_2 = 0}^{t_2 = k} \int_{t_1=0}^{t_1=l}  \exp (-0.1t_1 - 0.1t_2) \ dt_1 dt_2 &= c \int_{t_2 = 0}^{t_2 = \infty} \biggl[ -10 \exp(-0.1t_1 - 0.1t_2) \biggr]_{t_1=0}^{t_1 = l} \\
+    &= 10c \int_{t_2 = 0}^{t_2 = k}  \exp(-0.1t_2) + \exp(-0.1l - 0.1t_2) \ dt_2\\
+    &= 10c \int_{t_2 = 0}^{t_2 = k}  \exp(-0.1t_2)\ dt_2 + 10 c \int_{t_2 = 0}^{t_2 = k} \exp(-0.1l - 0.1t_2) \ dt_2\\
+    &= 10c \biggl[ 10 \exp(-0.1t_2) \biggr]_{t_2=k}^{t_2=0} + 10c \biggl[10 \exp(-0.1l -0.1t_2) \biggr]_{t_2 = k}^{t_2=0} \\
+    &= 10c \bigl[ 10 - 10\exp(-0.1k) \bigr] + 10c \bigl[10 \exp(-0.1l) - 10 \exp(-0.1l - 0.1k)\bigr] \\
+    &= 100c - 100\exp(-0.1k) + 100c\exp(-0.1l)  - 100c \exp(-0.1l - 0.1k)
+\end{align*}
+now we want to take the limit as $k,l$ approach infinity so we take an infinite integral 
+\[ \lim_{k,l \rightarrow \infty} 100c - 100\exp(-0.1k) + 100c\exp(-0.1l)  - 100c \exp(-0.1l - 0.1k) = 100c  \]
+and now going back to our original statement,
+\[ \int_{t_2 = 0}^{t_2 = \infty} \int_{t_1=0}^{t_1=\infty} f(t_1, t_2) \ dt_1 dt_2 = 1 \]
+\[ \boxed{100c = 1 \longrightarrow c = 0.01} \]
+now to find the marginal pdfs we need to integrate over all values of the other $t_i$
+\begin{align*}
+    f_1(t_1) &= \lim_{k \rightarrow \infty} \int_{0}^{k} f(t_1, t_2) \ dt_2 \\
+    &= \lim_{k \rightarrow \infty} 0.01 \biggl[ 10 \exp(-0.1t_1 - 0.1t_2) \biggr]_{t_2=k}^{t_2=0} \\
+    &= \lim_{k \rightarrow \infty} 0.1 \biggl[\exp(-0.1t_1) - \exp(-0.1t_1 - 0.1k) \biggr] \\
+    &=  0.1 \exp(-0.1t_1)
+\end{align*}
+\begin{align*}
+    f_2(t_2) &= \lim_{l \rightarrow \infty} \int_{0}^{l} f(t_1, t_2) \ dt_1 \\
+    &= \lim_{l \rightarrow \infty} 0.01 \biggl[ 10 \exp(-0.1t_1 - 0.1t_2) \biggr]_{t_1=l}^{t_1=0} \\
+    &= \lim_{l \rightarrow \infty} 0.1 \biggl[\exp(-0.1t_2) - \exp(-0.1t_2 - 0.1l) \biggr] \\
+    &=  0.1 \exp(-0.1t_2)
+\end{align*}
+for independence it is sufficient to show that
+\[ f(t_1, t_2) = f_1(t_1) \cdot f_2(t_2) \]
+so, using the derived marginal pdfs
+\begin{align*}
+    0.01 \exp (-0.1t_1 - 0.1t_2) &\stackrel{?}{=} f_1(t_1) \cdot f_2(t_2) \\
+    &= (0.1 \exp(-0.1t_1)) \cdot (0.1 \exp(-0.1t_2)) \\
+    &= 0.01 \exp(-0.1t_1) \exp(-0.1t_2) \\
+    &= 0.01 \exp(-0.1t_1 -0.1t_2) \tag{properties of exp}
+\end{align*}
+$ \hfill \blacksquare $
+
+\end{document}
