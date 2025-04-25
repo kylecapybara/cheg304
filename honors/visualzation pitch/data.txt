@@ -1,0 +1,53 @@
+building	room	width (in)	length (in)	height from floor (in)	chair height (in)
+recitation hall	101	18.5	11.1875	27.75	17.375
+Smith Hall	209	12.5	11.5	28.75	17
+Purnell Hall	115	10.125	12.5	23.5	16
+Purnell Hall	227	16.5	11.5	28	17
+Ewing Hall	204	18.125	11.5	27	17.25
+Gore Hall	308	14.75	11.75	29.5	18.25
+Penny	209	26.75	23.5	28.75	17.75
+ISE	110	22	12.25	28.25	18
+Pearson	114	21.50	13.00	29.00	19.50
+Pearson	218	22	12.25	28.25	18
+Colburn	366	10.13	12.50	27.00	17.75
+Colburn	102	29.75	17.50	28.75	17.75
+Colburn	109	14.63	13.75	27.75	16.75
+Robinson	206	29.50	19.75	28.00	16.25
+Robinson	203	34.5	20	30	17.75
+Robinson	202	30	24	29	17.75
+Memorial	37	16.75	11	28	17.75
+Memorial	48	36	36	28.75	16.75
+Memorial	28	9.6	9.6	28.5	18.25
+Memorial	107	36	21	28.5	18.25
+Memorial	110	28	30	28.75	17.75
+Memorial	109	16	26	28.75	18.25
+Memorial	127	28.25	18.75	31.5	21.25
+Brown Lab	101	10	11.5	23	16.25
+Brown Lab	116	13	20.5	29	17.75
+Brown Lab	206	16	26	28.25	17.75
+Brown Lab	220	29.75	29.5	28.75	17.75
+Brown Lab	207	18.25	11.625	27	18.5
+Gore Hall	102	18.25	11.75	28.25	17.5
+Gore Hall	116	25	22	29.25	19.5
+Gore Hall	218	22	12.25	28.25	18
+Gore Hall	208	16.25	11.25	28.5	16.25
+Gore Hall	304	14.75	12	29.75	18
+Gore Hall	316	36	36	28.75	16.75
+Sharp	100	14.5	13.5	28.5	17.75
+Sharp	130	10	11.5	23	16.25
+Wolf	100	10	11.5	23	16.25
+Smith Hall	209	12.5	11.5	28.75	17
+Smith Hall	120	10	11.5	23	16.25
+Kirkbride	100	10	11.5	23	16.25
+Ewing Hall	204	18.5	11.5	27.75	17.25
+Purnell Hall	115	10	11.5	23	16.25
+Purnell Hall	116	30	24	28.5	17.25
+Purnell Hall	228	16.5	11.5	28	17
+Purnell Hall	234	16	26	28.75	18.25
+Purnell Hall	331	21.5	13	28.25	18.5
+Alison	325	15	13.75	28.5	17.25
+willard	208	19.41	19.41	29.125	18.125
+willard	217	18.92	18.92	30.125	18.625
+willard	218	18.92	18.92	30.125	18.625
+willard	323	19.41	19.41	29.125	18.125
+willard	319	19.41	19.41	29.125	18.125
