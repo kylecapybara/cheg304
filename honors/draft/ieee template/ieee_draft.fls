@@ -483,7 +483,3 @@ INPUT ./vis/other_chair.png
 INPUT vis/other_chair.png
 INPUT ./vis/other_chair.png
 INPUT ./vis/other_chair.png
-INPUT ieee_draft.aux
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb
-INPUT /usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb

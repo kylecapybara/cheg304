@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex ieee_draft"] 1745591773 "ieee_draft.aux" "ieee_draft.bbl" "ieee_draft" 1745591808 0
+["bibtex ieee_draft"] 1745592391 "ieee_draft.aux" "ieee_draft.bbl" "ieee_draft" 1745592446 0
   "./zotero.bib" 1744335858 1518 5e50813c5a517f797db4a41f6fb32eef ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/ieeetran/IEEEtran.bst" 1440712899 57748 7c8250ecf02814ce6ddc0cdbb63df1dd ""
-  "ieee_draft.aux" 1745591807 2009 99d47196fc2b42c218e01a3c92ee1ab2 "pdflatex"
+  "ieee_draft.aux" 1745592446 2009 99d47196fc2b42c218e01a3c92ee1ab2 "pdflatex"
   (generated)
   "ieee_draft.bbl"
   "ieee_draft.blg"
   (rewritten before read)
-["pdflatex"] 1745591806 "/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex" "ieee_draft.pdf" "ieee_draft" 1745591808 0
-  "/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex" 1745591806 12464 26faf5d15633af773afd80ce81886d9c ""
+["pdflatex"] 1745592445 "/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex" "ieee_draft.pdf" "ieee_draft" 1745592446 0
+  "/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex" 1745592445 12555 b8719cc9994dacef62d91cea5771a2b8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm" 1136768653 2172 fd0c924230362ff848a33632ed45dc23 ""
@@ -84,9 +84,9 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1707781696 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1707781565 7883461 7db030e0d90063e28316e318d4f4f8c6 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "ieee_draft.aux" 1745591807 2009 99d47196fc2b42c218e01a3c92ee1ab2 "pdflatex"
-  "ieee_draft.bbl" 1745591773 1733 679ebcf2f77c44b2f91f2851166c88f5 "bibtex ieee_draft"
-  "ieee_draft.tex" 1745591806 12464 26faf5d15633af773afd80ce81886d9c ""
+  "ieee_draft.aux" 1745592446 2009 99d47196fc2b42c218e01a3c92ee1ab2 "pdflatex"
+  "ieee_draft.bbl" 1745592391 1733 679ebcf2f77c44b2f91f2851166c88f5 "bibtex ieee_draft"
+  "ieee_draft.tex" 1745592445 12555 b8719cc9994dacef62d91cea5771a2b8 ""
   "vis/hist.pdf" 1744339140 11852 7129e131b544bf228baafca7c3933362 ""
   "vis/mohamed_chair.png" 1744341482 495442 cf302a0a79326a0905c2535a8c14e59b ""
   "vis/other_chair.png" 1744341534 1145702 7b476dc5568f84a26c7960a297be5ac1 ""

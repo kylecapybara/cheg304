@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.12)  25 APR 2025 10:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.2.12)  25 APR 2025 10:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -392,35 +392,66 @@ Package pdftex.def Info: vis/other_chair.png  used on input line 160.
 (pdftex.def)             Requested size: 309.60315pt x 123.60448pt.
  [3
 
- <./vis/mohamed_chair.png> <./vis/other_chair.png>] [4
+ <./vis/mohamed_chair.png> <./vis/other_chair.png>]
+/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex:175: Misplaced \noalign.
+\toprule ->\noalign 
+                    {\ifnum 0=`}\fi \@aboverulesep =\abovetopsep \global \@b...
+l.175     \toprule
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
 
+/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex:176: Missing } inserted.
+<inserted text> 
+                }
+l.176     r
+           oom & width (in) & length (in) & height from floor (in) & chair h...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-]
+/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex:176: Missing } inserted.
+<inserted text> 
+                }
+l.176     r
+           oom & width (in) & length (in) & height from floor (in) & chair h...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
-** Conference Paper **
-Before submitting the final camera ready copy, remember to:
+/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex:176: Missing } inserted.
+<inserted text> 
+                }
+l.176     r
+           oom & width (in) & length (in) & height from floor (in) & chair h...
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
 
- 1. Manually equalize the lengths of two columns on the last page
- of your paper;
+/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex:176: Missing \cr inserted.
+<inserted text> 
+                \cr 
+l.176     r
+           oom & width (in) & length (in) & height from floor (in) & chair h...
+I'm guessing that you meant to end an alignment here.
 
- 2. Ensure that any PostScript and/or PDF output post-processing
- uses only Type 1 fonts and that every step in the generation
- process uses the appropriate paper size.
+/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex:176: Missing { inserted.
+<inserted text> 
+                {
+l.176     r
+           oom & width (in) & length (in) & height from floor (in) & chair h...
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
 
-(./ieee_draft.aux) ) 
-Here is how much of TeX's memory you used:
- 5522 strings out of 476025
- 90332 string characters out of 5790017
- 1873388 words of memory out of 5000000
- 25889 multiletter control sequences out of 15000+600000
- 549744 words of font info for 104 fonts, out of 8000000 for 9000
- 1141 hyphenation exceptions out of 8191
- 57i,8n,62p,1332b,298s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2023/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ieee_draft.pdf (4 pages, 1702750 bytes).
-PDF statistics:
- 108 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
- 0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+/Users/kylewodehouse/Documents/CHEG304/honors/draft/ieee template/ieee_draft.tex:176: Undefined control sequence.
+\@BTrule ...\doublerulesep \fi \fi \fi \@BTswitch 
+                                                  
+l.176     r
+           oom & width (in) & length (in) & height from floor (in)
